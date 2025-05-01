@@ -1,0 +1,18 @@
+# Changes here will be overwritten by Copier
+_commit: 2.6.0
+_src_path: gh:DiamondLightSource/python-copier-template
+author_email: daniel.fernandes@diamond.ac.uk
+author_name: Daniel Fernandes
+component_lifecycle: production
+component_owner: group:default/sscc
+component_type: service
+description: A side-car to provide ldap access to DLS containers
+distribution_name: account-sync-sidecar
+docker: true
+docs_type: README
+git_platform: github.com
+github_org: DiamondLightSource
+package_name: account_sync_sidecar
+pypi: false
+repo_name: account-sync-sidecar
+type_checker: pyright

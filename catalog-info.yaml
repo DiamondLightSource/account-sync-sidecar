@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: account-sync-sidecar
+  title: account-sync-sidecar
+  description: A side-car to provide ldap access to DLS containers
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/sscc
