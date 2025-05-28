@@ -12,7 +12,7 @@ Source          | <https://github.com/DiamondLightSource/account-sync-sidecar>
 Docker          | `docker run ghcr.io/diamondlightsource/account-sync-sidecar:latest`
 Releases        | <https://github.com/DiamondLightSource/account-sync-sidecar/releases>
 
-This side-car provides a socket that uses `nslcd` to load users and groups from remote LDAP directories.
+This side-car shares the `nslcd` socket with the main container, using [libnss-ldapd ](https://wiki.debian.org/LDAP/NSS) to load users and groups from remote LDAP directories.
 
 The primary use-case for this is to run the VS Code remote server in non-root containers on the DLS cluster.
 
