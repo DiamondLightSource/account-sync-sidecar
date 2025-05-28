@@ -5,28 +5,17 @@
 
 # account_sync_sidecar
 
-A side-car to provide ldap access to DLS containers
-
-This is where you should write a short paragraph that describes what your module does,
-how it does it, and why people should use it.
+A side-car container providing LDAP access to containers based on the DLS [python-copier-tempate](https://github.com/DiamondLightSource/python-copier-template)
 
 Source          | <https://github.com/DiamondLightSource/account-sync-sidecar>
 :---:           | :---:
 Docker          | `docker run ghcr.io/diamondlightsource/account-sync-sidecar:latest`
 Releases        | <https://github.com/DiamondLightSource/account-sync-sidecar/releases>
 
-This is where you should put some images or code snippets that illustrate
-some relevant examples. If it is a library then you might put some
-introductory code here:
+This side-car provides a socket that uses `nslcd` to load users and groups from remote LDAP directories.
 
-```python
-from account_sync_sidecar import __version__
+The primary use-case for this is to run the VS Code remote server in non-root containers on the DLS cluster.
 
-print(f"Hello account_sync_sidecar {__version__}")
-```
+A how-to can be found [here](https://github.com/DiamondLightSource/python-copier-template/tree/main/docs/how-to/debug-in-cluster.md). 
 
-Or if it is a commandline tool then you might put some example commands here:
-
-```
-python -m account_sync_sidecar --version
-```
+If the main container is templated from a release of python-copier-template, this release's version should be equal to the version of the account-sync-sidecar, as these are coordinated. To find python-copier-template version, check `/.copier-answers.yml` for a `_commit` field.
