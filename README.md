@@ -18,4 +18,4 @@ This allows containerised programs running as non-root users in the DLS clusters
 
 A how-to can be found [here](https://github.com/DiamondLightSource/python-copier-template/tree/main/docs/how-to/debug-in-cluster.md). 
 
-If the main container is templated from a release of python-copier-template, this release's version should be equal to the version of the account-sync-sidecar, as these are coordinated. To find python-copier-template version, check `/.copier-answers.yml` for a `_commit` field.
+If the main container is templated from a release of python-copier-template, this release's version should be equal to the version of the account-sync-sidecar, which will ensure that the underlying Debian image is mutually compatible with nss-ldapd. To find python-copier-template version, check `/.copier-answers.yml` for a `_commit` field.
