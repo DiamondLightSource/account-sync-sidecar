@@ -14,7 +14,7 @@ Releases        | <https://github.com/DiamondLightSource/account-sync-sidecar/re
 
 This side-car shares the `nslcd` socket with the main container, using [libnss-ldapd ](https://wiki.debian.org/LDAP/NSS) to load users and groups from remote LDAP directories.
 
-The primary use-case for this is to run the VS Code remote server in non-root containers on the DLS cluster.
+This allows containerised programs running as non-root users in the DLS clusters to know the username of the user they are running as. This is necessary to e.g. deploy VSCode server in the cluster.
 
 A how-to can be found [here](https://github.com/DiamondLightSource/python-copier-template/tree/main/docs/how-to/debug-in-cluster.md). 
 
